@@ -23,13 +23,13 @@ public class Lecture_6 {
     @Test(priority = 1)
     public void aboveTest() {
         WebElement password = driver.findElement((By.id("password")));
-        driver.findElement(with(By.tagName("input")).above(password)).sendKeys("above");
+        driver.findElement(with(By.tagName("input")).above(password));
     }
 
     @Test(priority = 2)
     public void belowTest() {
         WebElement userName = driver.findElement((By.id("user-name")));
-        driver.findElement(with(By.tagName("input")).below(userName)).sendKeys("below");
+        driver.findElement(with(By.tagName("input")).below(userName));
     }
 
     @Test(priority = 3)
@@ -49,6 +49,7 @@ public class Lecture_6 {
     public void nearTest() {
         WebElement password = driver.findElement((By.id("password")));
         driver.findElement(with(By.cssSelector("[placeholder]")).near(password)).sendKeys("near");
+        driver.findElement(with(By.tagName("input")).near(password)).sendKeys("near");
     }
 
 
